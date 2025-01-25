@@ -1,0 +1,29 @@
+{
+    "name": "lambda-function",
+    "version": "1.0.0",
+    "description": "AWS Lambda functions for authentication and data retrieval",
+    "scripts": {
+        "build": "tsc",
+        "predeploy": "npm run build",
+        "deploy": "cp -R node_modules dist/ && cp .env dist/ && npm run deploy:auth && npm run deploy:data",
+        "deploy:auth": "cd dist && zip -r ../auth.zip .",
+        "deploy:data": "cd dist && zip -r ../data.zip ."
+    },
+    "dependencies": {
+        "aws-sdk": "^2.814.0",
+        "bcryptjs": "^2.4.3",
+        "jsonwebtoken": "^9.0.0",
+        "uuid": "^9.0.0"
+    },
+    "devDependencies": {
+        "@types/aws-lambda": "^8.10.72",
+        "@types/aws-sdk": "^2.7.0",
+        "@types/bcryptjs": "^2.4.2",
+        "@types/jsonwebtoken": "^9.0.0",
+        "@types/node": "^16.11.7",
+        "@types/uuid": "^9.0.0",
+        "typescript": "^5.0.0"
+    },
+    "author": "",
+    "license": "ISC"
+}

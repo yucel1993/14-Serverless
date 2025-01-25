@@ -1,0 +1,40 @@
+openapi: 3.0.1
+info:
+  title: Auth API
+  description: API for user authentication
+  version: 1.0.0
+paths:
+  /auth:
+    post:
+      summary: Authenticate user
+      description: Authenticates a user using Basic Authentication
+      responses:
+        "200":
+          description: Authenticated
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+        "401":
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+      requestBody:
+        description: Basic Auth credentials
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                Authorization:
+                  type: string
+                  example: "Basic dGVzdHVzZXI6dGVzdHBhc3N3b3Jk"

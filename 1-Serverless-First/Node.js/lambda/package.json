@@ -1,0 +1,11 @@
+{
+  "name": "lambda_function",
+  "version": "1.0.0",
+  "description": "",
+  "main": "lambda_function.js",
+  "dependencies": {
+    "aws-sdk": "^2.0.0",
+    "crypto": "^1.0.1",
+    "dotenv": "^16.4.5"
+  }
+}

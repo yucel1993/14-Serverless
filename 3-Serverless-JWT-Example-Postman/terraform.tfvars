@@ -1,0 +1,3 @@
+USERS_TABLE         = "Users"
+JWT_SECRET          = "e4a8b7c2d1f8e3b4c5d6e7f8a9b0c1d2e4a8b7c2d1f8e3b4c5d6e7f8a9b0c1d21341"
+REFRESH_TOKEN_SECRET = "e4a8b7c2d1f8e3b4c5d6e7f8a9b0c1d2e4a8b7c2d1f8e3b4c5d6e7f8a9b0c1234341"
